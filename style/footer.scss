@@ -21,6 +21,11 @@
     @include desktop {
       width: 1292px;
     }
+
+    @include fourk {
+      width: 2580px;
+      margin: 150px auto;
+    }
   }
 
   address {
@@ -52,6 +57,11 @@
   @include desktop {
     width: 1292px;
     margin: 80px auto 0;
+  }
+
+  @include fourk {
+    width: 2580px;
+    margin: 150px auto 0;
   }
 
   svg {

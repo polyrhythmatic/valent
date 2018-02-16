@@ -6,6 +6,10 @@
     padding-top: 20px;
   }
 
+  @include fourk {
+    padding: 0 0 150px;
+  }
+
   svg {
     width: 50px;
     height: auto;
@@ -18,14 +22,23 @@
     @include desktop {
       width: 90px;
     }
+
+    @include fourk {
+      width: 180px;
+      margin: 150px auto;
+    }
   }
 
   li {
     width: 264px;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateY(20px);
-    @include transition(transform .55s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
+    // opacity: 0;
+    // transform: translateY(20px);
+    // @include transition(transform .55s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
+
+    @include fourk {
+      width: 725px;
+    }
   }
 
   li + li {
@@ -37,26 +50,23 @@
   h1 {
     color: white;
     margin: 0 auto;
-
-    @include greater_than_tablet {
-      opacity: 0;
-      transform: translateY(20px);
-      @include transition(transform .55s cubic-bezier(.25,.1,.25,1) 1.5s, opacity .9s cubic-bezier(.25,.1,.25,1) 1.5s);
-    }
+    opacity: 0;
+    transform: translateY(20px);
+    @include transition(transform .55s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
   }
 
   p {
     margin: 25px auto 0;
     color: #7C7B7B;
-
     opacity: 0;
     transform: translateY(20px);
-    @include greater_than_tablet {
-      @include transition(transform .55s cubic-bezier(.25,.1,.25,1) 1.5s, opacity .9s cubic-bezier(.25,.1,.25,1) 1.5s);
-    }
+    @include transition(transform .55s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
   }
 
   ul {
+    max-width: 2580px;
+    margin: 0 auto;
+
     @include greater_than_tablet {
       @include flexbox;
       padding: 0 60px;
@@ -67,22 +77,19 @@
 .research {
 
   svg {
-
-    @include greater_than_tablet {
-      transform: rotate(-30deg);
-      opacity: 0;
-      @include transition(transform .7s cubic-bezier(.25,.1,.25,1), opacity .5s cubic-bezier(.25,.1,.25,1));
-    }
+    transform: rotate(-30deg);
+    opacity: 0;
+    @include transition(transform .7s cubic-bezier(.25,.1,.25,1), opacity .5s cubic-bezier(.25,.1,.25,1));
   }
 }
 
 .strategy {
 
   svg {
-
+    transform: rotate(45deg) translateY(30px) scale(0.5);
+    opacity: 0;
+    @include transition(transform .6s cubic-bezier(.25,.1,.25,1), opacity .6s cubic-bezier(.25,.1,.25,1));
     @include greater_than_tablet {
-      transform: rotate(45deg) translateY(30px) scale(0.5);
-      opacity: 0;
       @include transition(transform .6s cubic-bezier(.25,.1,.25,1) .4s, opacity .6s cubic-bezier(.25,.1,.25,1) .4s);
     }
   }
@@ -91,10 +98,10 @@
 .engagement {
 
   svg {
-
+    transform: translateY(50px);
+    opacity: 0;
+    @include transition(transform .6s cubic-bezier(.25,.1,.25,1), opacity .6s cubic-bezier(.25,.1,.25,1));
     @include greater_than_tablet {
-      transform: translateY(50px);
-      opacity: 0;
       @include transition(transform .6s cubic-bezier(.25,.1,.25,1) .8s, opacity .6s cubic-bezier(.25,.1,.25,1) .8s);
     }
   }

@@ -3,6 +3,7 @@ $font: 15px/17px "MarkOT", Arial, "Helvetica Neue", Helvetica, sans-serif;
 $tablet-width: 700px;//changed from 768
 $laptop-width: 1024px;
 $desktop-width: 1440px;
+$fourk-width: 2880px;
 
 $pink: #E51F59;
 $light-pink: #F5B5BA;
@@ -29,7 +30,13 @@ $med-grey: #C6C6C5;
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width}) {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$fourk-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin fourk {
+  @media (min-width: #{$fourk-width}) {
     @content;
   }
 }
@@ -88,6 +95,11 @@ body {
   @include desktop {
     font-size: 21px;
     line-height: 24px;
+  }
+
+  @include fourk {
+    font-size: 42px;
+    line-height: 48px;
   }
 }
 

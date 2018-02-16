@@ -121,18 +121,22 @@
   </nav>
 </header>
 <section class="about" id="about">
-  <div class="about-wrapper">
-    <h1 class="text-block">About Us</h1>
-    <p class="text-block">Valent Projects is a specialist strategic communications consultancy. We help our clients reach, understand and move their audiences.</p>
-    <p class="text-block">The world around us is changing rapidly. At the heart of this change, is the way people learn about the world, express themselves and engage with each other. Our mission is to understand this disruption and to develop new strategies and tactics to navigate the fast evolving landscape.</p>
+  <div class="about-outerwrapper">
+    <div class="about-wrapper">
+      <h1 class="text-block">About Us</h1>
+      <p class="text-block">Valent Projects is a specialist strategic communications consultancy. We help our clients reach, understand and move their audiences.</p>
+      <p class="text-block">The world around us is changing rapidly. At the heart of this change, is the way people learn about the world, express themselves and engage with each other. Our mission is to understand this disruption and to develop new strategies and tactics to navigate the fast evolving landscape.</p>
+    </div>
   </div>
 </section>
 <section class="work" id="work">
-  <div class="work-wrapper">
-    <h1 class="text-block">Our Work</h1>
-    <p class="text-block">In an increasingly interconnected world, we believe there is no substitute for engaging people directly. The days when any one broadcaster or publication could reach a huge mass of people and inform their opinions are long gone. Our world is much more democratic. However, even though anyone with an internet connection can become a broadcaster, to be heard above the clamour requires an understanding of the audience, the context and the media landscape.</p>
+  <div class="work-outerwrapper">
+    <div class="work-wrapper">
+      <h1 class="text-block">Our Work</h1>
+      <p class="text-block">In an increasingly interconnected world, we believe there is no substitute for engaging people directly. The days when any one broadcaster or publication could reach a huge mass of people and inform their opinions are long gone. Our world is much more democratic. However, even though anyone with an internet connection can become a broadcaster, to be heard above the clamour requires an understanding of the audience, the context and the media landscape.</p>
+    </div>
+    <p class="text-block">Whoever we are working with, we work to create valence — finding that common ground over which people can combine their efforts and together build something greater than the sum of its parts.</p>
   </div>
-  <p class="text-block">Whoever we are working with, we work to create valence — finding that common ground over which people can combine their efforts and together build something greater than the sum of its parts.</p>
 </section>
 <section class="process" id="process">
   <ul>
@@ -226,7 +230,7 @@
     inView.offset({
       top: 0,
       right: 0,
-      bottom: 100,
+      bottom: 150,
       left: 0
     });
 
@@ -255,10 +259,10 @@
       e.style.transform = "translateY(0px)";
     });
 
-    inView(".process li").on("enter", function(e){
-      e.style.opacity = 1;
-      e.style.transform = "translateY(0px)";
-    });
+    // inView(".process li").on("enter", function(e){
+    //   e.style.opacity = 1;
+    //   e.style.transform = "translateY(0px)";
+    // });
 
     inView(".process svg").on("enter", function(e){
       e.style.opacity = 1;
@@ -376,6 +380,16 @@
           });
         }.bind(navs[i]));
       }
+
+      // window.onscroll = function(ev) {
+      //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      //     document.body.style.backgroundColor = "#f5b5ba";
+      //   } else if(window.scrollY <= 0) {
+      //     document.body.style.backgroundColor = "#E51F59";
+      //   } else {
+      //     document.body.style.backgroundColor = "white";
+      //   }
+      // };
     })()
   </script>
 </footer>

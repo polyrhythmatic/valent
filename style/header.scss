@@ -12,6 +12,10 @@
   @include desktop {
     width: 650px;
   }
+
+  @include fourk {
+    width: 1200px;
+  }
 }
 
 .header {
@@ -30,6 +34,10 @@
 
   @include desktop {
     height: 405px;
+  }
+
+  @include fourk {
+    height: 810px;
   }
 
   h1 {
@@ -71,6 +79,11 @@
       font-size: 15px;
       line-height: 15px;
     }
+
+    @include fourk {
+      font-size: 30px;
+      line-height: 34px;
+    }
   }
 
   ul {
@@ -109,6 +122,10 @@
 
     @include desktop {
       width: 200px;
+    }
+
+    @include fourk {
+      width: 400px;
     }
   }
 }
