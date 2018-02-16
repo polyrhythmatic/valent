@@ -1,0 +1,33 @@
+.about {
+  padding: 50px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  @include transition(transform 1s cubic-bezier(.25,.1,.25,1), opacity 1s cubic-bezier(.25,.1,.25,1));
+
+  @include greater_than_tablet {
+    @include flexbox;
+    @include row-reverse;
+  }
+
+  @include desktop {
+    padding: 60px 0 85px;
+  }
+
+  h1 {
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 22px auto 0;
+
+    @include desktop {
+      margin: 35px auto 0;
+    }
+  }
+}
+
+.about-wrapper {
+  @include greater_than_tablet {
+    width: 50%;
+  }
+}

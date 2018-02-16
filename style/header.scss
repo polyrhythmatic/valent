@@ -1,0 +1,114 @@
+.text-block {
+  width: 264px;
+
+  @include tablet {
+    width: 283px;
+  }
+
+  @include laptop {
+    width: 462px;
+  }
+
+  @include desktop {
+    width: 650px;
+  }
+}
+
+.header {
+  height: auto;
+  overflow: auto;
+  background-color: $pink;
+  position: relative;
+
+  @include tablet {
+    height: 1028px;
+  }
+
+  @include laptop {
+    height: 288px;
+  }
+
+  @include desktop {
+    height: 405px;
+  }
+
+  h1 {
+    width: 264px;
+    margin: 45px auto;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 15px 0;
+    font-size: 9px;
+    line-height: 10px;
+    word-spacing: 9999999px;
+
+    @include greater_than_tablet {
+      word-spacing: unset;
+      border-top: unset;
+      border-bottom: unset;
+      width: auto;
+      margin: 0 0 18px;
+      font-size: unset;
+      padding: 0;
+      line-height: unset;
+      transform: translateX(-20px);
+      opacity: 0;
+      @include transition(transform .6s cubic-bezier(.25,.1,.25,1), opacity .6s cubic-bezier(.25,.1,.25,1));
+    }
+  }
+
+  nav {
+    @include greater_than_tablet {
+      font-size: 11px;
+      line-height: 11px;
+      position: absolute;
+      top: 60px;
+      right: 80px;
+    }
+
+    @include desktop {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
+
+  ul {
+    display: none;
+    color: $light-pink;
+    @include greater_than_tablet {
+      display: block;
+      transform: translateY(-20px);
+      opacity: 0;
+      @include transition(transform .9s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
+    }
+  }
+}
+
+.header-svg__wrapper {
+  @include greater_than_tablet {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+
+  svg {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 80px 0 0;
+    opacity: 0;
+    transform: translateY(40px);
+    @include transition(transform .6s cubic-bezier(.25,.1,.25,1), opacity .6s cubic-bezier(.25,.1,.25,1));
+
+    @include greater_than_tablet {
+      padding: 0;
+    }
+
+    @include desktop {
+      width: 200px;
+    }
+  }
+}

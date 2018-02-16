@@ -1,0 +1,61 @@
+.footer {
+  background-color: $light-pink;
+  overflow: hidden;
+
+  ul {
+    width: 264px;
+    margin: 70px auto;
+    transform: translateX(20px);
+    opacity: 0;
+    @include transition(transform .9s cubic-bezier(.25,.1,.25,1), opacity .9s cubic-bezier(.25,.1,.25,1));
+
+    @include tablet {
+      width: 630px;
+    }
+
+    @include laptop {
+      width: 900px;
+      margin: 42px auto;
+    }
+
+    @include desktop {
+      width: 1292px;
+    }
+  }
+
+  address {
+    color: white;
+  }
+
+  a {
+    color: black;
+    margin: 0 0 22px;
+    display: block;
+  }
+}
+
+.drawing-wrapper {
+  width: 850px;
+  overflow: hidden;
+  margin: 25px auto 0;
+
+  @include tablet {
+    width: 688px;
+    margin: 45px auto 0;
+  }
+
+  @include laptop {
+    width: 900px;
+    margin: 45px auto 0;
+  }
+
+  @include desktop {
+    width: 1292px;
+    margin: 80px auto 0;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
