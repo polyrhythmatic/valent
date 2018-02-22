@@ -89,24 +89,6 @@
                     <g id="Clip-28"></g>
                     <polygon id="Fill-27" fill="#FFFFFF" mask="url(#mask-4)" points="27.3844428 166.398708 30.074214 166.398708 30.074214 151.912226 27.3844428 151.912226"></polygon>
                     <path d="M101.60013,153.4756 C101.60013,154.338984 100.902979,155.039082 100.04323,155.039082 C99.1834804,155.039082 98.4868605,154.338984 98.4868605,153.4756 C98.4868605,152.612217 99.1834804,151.912119 100.04323,151.912119 C100.902979,151.912119 101.60013,152.612217 101.60013,153.4756" id="Fill-29" fill="#FFFFFF" mask="url(#mask-4)"></path>
-<!--                     <polygon id="Fill-30" fill="#F5B5BA" mask="url(#mask-4)" points="51.3622494 74.7489238 46.4242716 79.7077745 46.4242716 95.7155826 67.3026775 74.7489238"></polygon>
-                    <polygon id="Fill-31" fill="#F5B5BA" mask="url(#mask-4)" points="77.928921 49.8484286 71.2193712 56.5863396 71.2193712 70.8150873 92.0977771 49.8484286"></polygon>
-                    <polygon id="Fill-32" fill="#F5B5BA" mask="url(#mask-4)" points="120.810739 70.8150873 141.689145 49.8484286 127.520289 49.8484286 120.810739 56.5863396"></polygon>
-                    <polygon id="Fill-33" fill="#F5B5BA" mask="url(#mask-4)" points="96.0151085 79.7079879 96.0151085 95.715796 116.893514 74.7491373 100.953618 74.7491373"></polygon>
-                    <polygon id="Fill-34" fill="#F5B5BA" mask="url(#mask-4)" points="54.9045963 24.9479333 46.4240059 33.4643711 46.4240059 45.9145921 67.3024118 24.9479333"></polygon>
-                    <polygon id="Fill-35" fill="#F5B5BA" mask="url(#mask-4)" points="96.0151085 45.9145921 116.893514 24.9479333 104.495699 24.9479333 96.0151085 33.4643711"></polygon>
-                    <polygon id="Fill-36" fill="#F5B5BA" mask="url(#mask-4)" points="71.2194244 21.0141502 92.0978303 0.0474914137 81.4715867 0.0474914137 71.2194244 10.342456"></polygon>
-                    <polygon id="Fill-37" fill="#F5B5BA" mask="url(#mask-4)" points="71.2194244 102.829956 71.2194244 120.616291 92.0978303 99.6490989 74.386893 99.6490989"></polygon>
-                    <polygon id="Fill-38" fill="#F5B5BA" mask="url(#mask-4)" points="28.3378716 49.8484286 21.6283218 56.5863396 21.6283218 70.8150873 42.5067277 49.8484286"></polygon>
-                    <polygon id="Fill-39" fill="#FFFFFF" mask="url(#mask-4)" points="70.4696148 56.5863396 63.7600649 49.8484286 49.5912089 49.8484286 70.4696148 70.8150873"></polygon>
-                    <polygon id="Fill-40" fill="#FFFFFF" mask="url(#mask-4)" points="95.2652458 79.7079879 90.3267365 74.7491373 74.3868399 74.7491373 95.2652458 95.715796"></polygon>
-                    <polygon id="Fill-41" fill="#FFFFFF" mask="url(#mask-4)" points="95.2652458 33.4643711 86.7846554 24.9479333 74.3868399 24.9479333 95.2652458 45.9145921"></polygon>
-                    <polygon id="Fill-42" fill="#FFFFFF" mask="url(#mask-4)" points="99.182524 49.8484286 120.06093 70.8150873 120.06093 56.5863396 113.35138 49.8484286"></polygon>
-                    <polygon id="Fill-43" fill="#FFFFFF" mask="url(#mask-4)" points="70.4696148 102.829956 67.3026775 99.6490989 49.5912089 99.6490989 70.4696148 120.616291"></polygon>
-                    <polygon id="Fill-44" fill="#FFFFFF" mask="url(#mask-4)" points="45.6741963 79.7079879 40.7356871 74.7491373 24.7957904 74.7491373 45.6741963 95.715796"></polygon>
-                    <polygon id="Fill-45" fill="#FFFFFF" mask="url(#mask-4)" points="20.8785122 56.5863396 14.1689624 49.8484286 0.000106273063 49.8484286 20.8785122 70.8150873"></polygon>
-                    <polygon id="Fill-46" fill="#FFFFFF" mask="url(#mask-4)" points="70.4696148 10.3424026 60.2179838 0.0474380526 49.5912089 0.0474380526 70.4696148 21.0140968"></polygon>
-                    <polygon id="Fill-47" fill="#FFFFFF" mask="url(#mask-4)" points="45.6741963 33.4643711 37.1936059 24.9479333 24.7957904 24.9479333 45.6741963 45.9145921"></polygon> -->
                 </g>
             </g>
         </g>
@@ -199,7 +181,7 @@
 <footer class="footer" id="footer">
   <div class="drawing-wrapper" id="drawing"></div>
   <ul>
-    <li><a href="mailto:info@valent-projects.co.uk">Contact</a></li>
+    <li><h1>Contact</h1></li>
     <li><address>
       Valent Projects <br>
       152 Peach Road <br>
@@ -207,6 +189,7 @@
       W10 4DY <br>
       UK
     </address></li>
+    <li><a href="mailto:info@valent-projects.co.uk">Send us an email</a></li>
   </ul>
   <script type="text/javascript">
   var draw = SVG("drawing").viewbox(115, 115, 1710, 470)
@@ -247,9 +230,27 @@
       e.style.transform = "translate(0)";
     });
 
+    var draw2 = SVG("mainLogo");
     inView(".header svg").on("enter", function(e){
       e.style.opacity = 1;
       e.style.transform = "translateY(0px)";
+
+      for (var i = 0; i < mainPolys.length; i++) {
+          for (var j = 0; j < mainPolys[i].length; j++) {
+              var pointStr = "";
+              for (var k = 0; k < mainPolys[i][j].points.length; k++) {
+                  pointStr += mainPolys[i][j].points[k].x + " " + mainPolys[i][j].points[k].y;
+                  if (k != mainPolys[i][j].points.length - 1) pointStr += ", ";
+              }
+              var poly = draw2.polygon(pointStr).scale(0.1, 0.1).attr({ opacity: 0, fill: mainPolys[i][j].color })
+
+              poly.animate({
+                  ease: ">",
+                  delay: (i+1) * (j+1) * 40,
+                  duration: 1500
+              }).attr({ opacity: 1 }).scale(1, 1);
+          }
+      }
     });
 
     inView(".about").on("enter", function(e){
@@ -261,11 +262,6 @@
       e.style.opacity = 1;
       e.style.transform = "translateY(0px)";
     });
-
-    // inView(".process li").on("enter", function(e){
-    //   e.style.opacity = 1;
-    //   e.style.transform = "translateY(0px)";
-    // });
 
     inView(".process svg").on("enter", function(e){
       e.style.opacity = 1;
@@ -379,41 +375,10 @@
             600,
             "easeInOutQuad",
             function() {
-            //console.log("Just finished scrolling to" + window.pageYOffset + "px");
           });
         }.bind(navs[i]));
       }
-
-      // window.onscroll = function(ev) {
-      //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      //     document.body.style.backgroundColor = "#f5b5ba";
-      //   } else if(window.scrollY <= 0) {
-      //     document.body.style.backgroundColor = "#E51F59";
-      //   } else {
-      //     document.body.style.backgroundColor = "white";
-      //   }
-      // };
     })()
-  </script>
-  <script type="text/javascript">
-  var draw = SVG("mainLogo");
-
-  for (var i = 0; i < mainPolys.length; i++) {
-      for (var j = 0; j < mainPolys[i].length; j++) {
-          var pointStr = "";
-          for (var k = 0; k < mainPolys[i][j].points.length; k++) {
-              pointStr += mainPolys[i][j].points[k].x + " " + mainPolys[i][j].points[k].y;
-              if (k != mainPolys[i][j].points.length - 1) pointStr += ", ";
-          }
-          var poly = draw.polygon(pointStr).scale(0.1, 0.1).attr({ opacity: 0, fill: mainPolys[i][j].color })
-
-          poly.animate({
-              ease: ">",
-              delay: (i+1) * (j+1) * 40,
-              duration: 1500
-          }).attr({ opacity: 1 }).scale(1, 1);
-      }
-  }
   </script>
 </footer>
 </body>

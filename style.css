@@ -89,7 +89,7 @@ body {
       line-height: 48px; } }
 
 p {
-  color: #C6C6C5; }
+  color: #a5a5a1; }
 
 .text-block {
   width: 264px; }
@@ -418,12 +418,16 @@ p {
       .footer ul {
         width: 2580px;
         margin: 150px auto; } }
-  .footer address {
+  .footer address, .footer a {
     color: white; }
-  .footer a {
+  .footer h1 {
     color: black;
     margin: 0 0 22px;
     display: block; }
+  .footer a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: underline; }
 
 .drawing-wrapper {
   width: 850px;

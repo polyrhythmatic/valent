@@ -28,14 +28,20 @@
     }
   }
 
-  address {
+  address, a {
     color: white;
   }
 
-  a {
+  h1 {
     color: black;
     margin: 0 0 22px;
     display: block;
+  }
+
+  a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: underline;
   }
 }
 
